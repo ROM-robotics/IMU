@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="imu_node" pkg="imu_ros" type="imu_6050.py" >
+    <param name="imu_frame" value="imu"/>
+  </node>
+  
+  <node name="complementary_filter" pkg="imu_complementary_filter" type="complementary_filter_node" >
+  </node>
+  
+  <node name="imu_tf" pkg="imu_ros" type="tf_broadcaster_imu.py" >
+  </node>
+  
+</launch>
